@@ -1,6 +1,6 @@
 <header
   id="header-style-2"
-  class="torque-header">
+  class="torque-header hero-overlay">
 
   <div class="row torque-header-content-wrapper torque-navigation-toggle">
 
@@ -14,17 +14,14 @@
       </div>
     </div>
 
-    <div class="torque-header-logo-wrapper">
-      <?php get_template_part( 'parts/shared/logo', 'white' ); ?>
-    </div>
+  </div>
 
+  <div class="torque-header-logo-wrapper">
+    <?php get_template_part( 'parts/shared/logo', 'white' ); ?>
   </div>
 
   <div class="torque-navigation-toggle torque-header-menu-items-mobile">
-    <?php get_template_part( 'parts/shared/header-templates/header', 'top-links'); ?>
     <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'stacked'); ?>
   </div>
-
-  <?php get_template_part( 'parts/shared/header-templates/header', 'specials-bar'); ?>
 
 </header>

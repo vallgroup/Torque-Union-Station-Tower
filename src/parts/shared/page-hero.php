@@ -21,7 +21,7 @@ if (($type === 'image' && $image) || ($type === 'slideshow' && $slideshow)) { ?>
     echo do_shortcode($slideshow);
   } ?>
 
-  <?php include locate_template('/parts/shared/overlay.php'); ?>
+  <?php include locate_template('/parts/shared/hero-navigation.php'); ?>
 </div>
 
 <?php } else { ?>
