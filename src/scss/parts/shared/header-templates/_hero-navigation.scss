@@ -1,80 +1,177 @@
 .page-hero {
-    position: relative;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 75px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: transparent;
-  z-index: 9999;
+  position: relative;
 
-  .side_box {
-    flex: 0 1 25%;
-  }
-
-  .menu_items_wrapper {
-    flex: 1 0 50%;
-
-    .menu-items {
-        list-style-type: none;
+  .torque-slideshow-react-entry {
+    .tq-side-overlay-left {
+      display: none;
     }
 
-    .logo {
-      width: 80%;
-      max-width: 400px;
+    .tq-side-overlay-right {
+      display: none;
+    }
+
+    .-root__lzJxo- .-tracker_icon__2s0vW- {
+      width: 27px;
+      height: 2px;
+      border-radius: 0;
+      border: 0;
+      background-color: $white;
+      transition-duration: 0.2s;
+
+      @include respond-to(tablet) {
+        height: 3px;
+        width: 38px;
+      }
+
+      @include respond-to(desktop) {
+        height: 4px;
+      }
+    }
+
+    .-root__lzJxo- .-tracker_icon__2s0vW-.-active__3RO-n- {
+        background-color: $dark-teal;
+    }
+
+    .-root__2CKu7-{
+      padding-bottom: 10%;
+      min-height: 274px;
+
+      @include respond-to(tablet) {
+        padding-bottom: 20%;
+        min-height: 306px;
+      }
+
+      @include respond-to(desktop) {
+        padding-bottom: 37%;
+      }
+    }
+
+    .-root__2CKu7- .-tracker__1tpcs- {
+      bottom: 34px;
     }
   }
-  .torque-header-overlay-container {
-    position: relative;
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 75px;
+    width: 100%;
     height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 9999;
 
-    .hero-left-border {
-      position: absolute;
-      right: auto;
-      border: 2px solid #ffffff;
-      border-right-width: 0;
-      width: calc(((((100vw - 30px) / 2) - 50%)) - 106px);
-      left: calc(0px - (((((100vw - 30px) / 2) - 50%)) - 76px));
-      top: 0;
-      bottom: -23px;
-
-      .hero-left-sub-border {
-        position: absolute;
-        border: 2px solid #ffffff;
-        border-right-width: 0;
-        top: 23px;
-        bottom: 23px;
-        left: 23px;
-        right: 0;
-      }
+    .side_box {
+      flex: 0 1 25%;
     }
 
-    .hero-right-border {
-      position: absolute;
-      right: auto;
-      border: 2px solid #ffffff;
-      border-left-width: 0;
-      width: calc(((((100vw - 30px) / 2) - 50%)) - 106px);
-      right: calc(0px - (((((100vw - 30px) / 2) - 50%)) - 76px));
-      top: 0;
-      bottom: -23px;
+    .menu_items_wrapper {
+      flex: 1 0 50%;
 
-      .hero-right-sub-border {
+      .menu-items {
+          list-style-type: none;
+      }
+
+      .logo {
+        width: 80%;
+        max-width: 400px;
+      }
+    }
+    .torque-header-overlay-container {
+      position: relative;
+      height: 100%;
+
+      .hero-left-border {
         position: absolute;
-        border: 2px solid #ffffff;
+        right: auto;
+        border: 2px solid $white;
+        border-right-width: 0;
+        width: calc(((((100vw - 15px) / 2) - 50%) - 20px) - 20px);
+        left: calc(0px - ((((100vw - 15px) / 2) - 50%) - 12px));
+        top: 5px;
+        bottom: -23px;
+
+        @include respond-to(tablet) {
+          top: 0;
+          width: calc(((((100vw - 15px) / 2) - 50%) - 35px) - 20px);
+          left: calc(0px - (((((100vw - 15px) / 2) - 50%)) - 35px));
+        }
+
+        @include respond-to(desktop) {
+          width: calc(((((100vw - 15px) / 2) - 50%) - 76px) - 20px);
+          left: calc(0px - ((((100vw - 15px) / 2) - 50%) - 76px));
+        }
+
+        .hero-left-sub-border {
+          position: absolute;
+          border: 2px solid $white;
+          border-right-width: 0;
+          top: 11px;
+          bottom: 11px;
+          left: 11px;
+          right: 0;
+
+          @include respond-to(tablet) {
+            top: 12px;
+            bottom: 12px;
+            left: 12px;
+          }
+
+          @include respond-to(desktop) {
+            top: 23px;
+            bottom: 23px;
+            left: 23px;
+          }
+        }
+      }
+
+      .hero-right-border {
+        position: absolute;
+        right: auto;
+        border: 2px solid $white;
         border-left-width: 0;
-        top: 23px;
-        bottom: 23px;
-        right: 23px;
-        left: 0;
+        width: calc(((((100vw - 15px) / 2) - 50%) - 20px) - 20px);
+        right: calc(0px - ((((100vw - 15px) / 2) - 50%) - 12px));
+        top: 5px;
+        bottom: -23px;
+
+        @include respond-to(tablet) {
+          top: 0;
+          width: calc(((((100vw - 15px) / 2) - 50%) - 35px) - 20px);
+          right: calc(0px - (((((100vw - 15px) / 2) - 50%)) - 35px));
+        }
+
+        @include respond-to(desktop) {
+          width: calc(((((100vw - 15px) / 2) - 50%) - 76px) - 20px);
+          right: calc(0px - ((((100vw - 15px) / 2) - 50%) - 76px));
+        }
+
+        .hero-right-sub-border {
+          position: absolute;
+          border: 2px solid $white;
+          border-left-width: 0;
+          top: 11px;
+          bottom: 11px;
+          right: 11px;
+          left: 0;
+
+          @include respond-to(tablet) {
+            top: 12px;
+            bottom: 12px;
+            right: 12px;
+          }
+
+          @include respond-to(desktop) {
+            top: 23px;
+            bottom: 23px;
+            right: 23px;
+          }
+        }
       }
     }
   }
+
 }

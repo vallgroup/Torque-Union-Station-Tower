@@ -1,23 +1,40 @@
 header#header-style-2 {
   padding: 0;
-  top: 18px;
+  top: 35px;
   width: 100%;
-  height: calc(100% - 130px);
+  height: calc(100% - 93px);
   box-sizing: border-box;
+
   @include respond-to(tablet) {
+    height: calc(100% - 84px);
+    top: 31px;
+  }
+
+  @include respond-to(desktop) {
+    height: calc(100% - 130px);
     top: 66px;
   }
 
   .torque-header-logo-wrapper {
-    height: 100%;
+    width: 122px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 
-    div {
-      width: 120px;
-      height: 100%;
+    @include respond-to(tablet) {
+      width: 256px;
+      margin: 25px auto 0;
+    }
+
+    @include respond-to(desktop) {
+      width: 376px;
+      margin: 34px auto 0;
     }
 
     img {
-      height: 100%;
+      height: auto;
       width: auto;
       max-width: 100%;
       object-fit: contain;
@@ -34,19 +51,30 @@ header#header-style-2 {
     }
     .torque-burger-menu {
         position: absolute;
-        right: 0;
-        top: 10%;
+        right: calc(0px - ((((100vw - 15px) / 2) - 50%) - 12px));
+        top: -14px;
         transform: translateY(-50%);
+        
         .torque-burger-menu-line {
-          background-color: #fff;
+          background-color: $white;
+          width: 18px;
         }
       }
     }
 
     .torque-header-menu-items-inline-wrapper {
       .torque-menu-item {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: $font_menu_items;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $white;
+
+        @include respond-to-max(desktop) {
+          font-size: 15px;
+        }
       }
       
       @include respond-to-max(tablet) {
@@ -58,7 +86,7 @@ header#header-style-2 {
   .torque-header-menu-items-mobile {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 32px;
     width: 100%;
     height: auto;
     max-height: 0px;
@@ -70,13 +98,14 @@ header#header-style-2 {
     padding-right: 17.5vw;
     padding-left: 17.5vw;
     padding-bottom: 35px;
-    right: 0;
-    left: unset;
-    max-width: 485px;
+    right: auto;
+    left: 47px;
+    max-width: calc(100vw - 93px);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: rgba(228, 227, 223, 0.85);
     text-align: right;
+    margin: 0;
 
     &.active {
       max-height: 100vh;
