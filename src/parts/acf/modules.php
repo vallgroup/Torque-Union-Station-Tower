@@ -17,6 +17,15 @@ if ( have_rows( $modules ) ):
 
         break;
       
+      case 'image_with_text' :
+
+        $image = get_sub_field( 'image' );
+        $description = get_sub_field( 'description' );
+
+        include locate_template('/parts/acf/modules/image-with-text.php');
+
+        break;
+      
       case 'content_section' :
 
         $align = get_sub_field( 'align' );

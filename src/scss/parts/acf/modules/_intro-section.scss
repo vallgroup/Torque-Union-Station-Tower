@@ -53,7 +53,7 @@
       content: '';
       position: absolute;
       top: -8px;
-      border: 2px solid #7caed2;
+      border: 2px solid $blue-gray;
       border-left-width: 0;
       border-right-width: 0;
       height: 4px;
@@ -70,7 +70,7 @@
       content: '';
       position: absolute;
       bottom: -8px;
-      border: 2px solid #7caed2;
+      border: 2px solid $blue-gray;
       border-left-width: 0;
       border-right-width: 0;
       height: 4px;
@@ -85,7 +85,7 @@
   }
 
   .description {
-    color: #5b666f;
+    color: $dark-grey;
     font-family: $font_intro_content;
     font-size: 15px;
     line-height: 24px;

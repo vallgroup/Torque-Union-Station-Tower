@@ -33,5 +33,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Town80TextBook;
+  src: url('../statics/fonts/Town-Font/Town 80 Text/Town80Text-Book.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
