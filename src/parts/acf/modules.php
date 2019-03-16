@@ -8,6 +8,15 @@ if ( have_rows( $modules ) ):
 
     switch ( get_row_layout() ) {
 
+      case 'intro_section' :
+
+        $title = get_sub_field( 'title' );
+        $description = get_sub_field( 'description' );
+
+        include locate_template('/parts/acf/modules/intro-section.php');
+
+        break;
+      
       case 'content_section' :
 
         $align = get_sub_field( 'align' );
