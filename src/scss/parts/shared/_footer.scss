@@ -1,0 +1,135 @@
+footer {
+  width: 100%;
+  padding: 74px 0 60px;
+  background-color: $dark-grey;
+
+  .footer-content-wrapper {
+    margin: 0 auto;
+    padding: 0 56px;
+    max-width: calc(100% - 112px);
+    width: 510px;
+
+    @include respond-to(desktop) {
+      width: 1176px;
+    }
+
+    .row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -12px;
+      margin-left: -12px;
+
+      .torque-footer-col {
+        padding: 0 12px;
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        @include respond-to(tablet) {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        
+        @include respond-to(desktop) {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+
+        h4 {
+          color: $white;
+          font-size: 17px;
+          line-height: 22px;
+          padding: 11px 12px !important;
+          margin: 0;
+          font-family: $font_title_footer;
+          text-align: center;
+
+          @include respond-to(tablet) {
+            text-align: left;
+            font-size: 19px;
+            line-height: 25px;
+            padding: 0 12px !important;
+          }
+            
+          @include respond-to(desktop) {
+            padding: 11px 12px !important;
+            font-size: 27px;
+            line-height: 28px;
+          }
+        }
+
+        .textwidget{
+          color: $white;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 0;
+          font-family: $font_image_with_text;
+          text-align: center;
+
+          @include respond-to(tablet) {
+            text-align: left;
+          }
+
+          @include respond-to(desktop) {
+            font-size: 17px;
+          }
+
+          p {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .torque-footer-col:first-child {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        
+        @include respond-to(desktop) {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+
+        .widget {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin-right: -12px;
+          margin-left: -12px;
+
+          h4, .textwidget {
+            display: block;
+            position: relative;
+            padding: 0 12px;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 calc(100% - 24px);
+            flex: 0 0 calc(100% - 24px);
+            max-width: calc(100% - 24px);
+    
+            @include respond-to(tablet) {
+              -ms-flex: 0 0 calc(50% - 24px);
+              flex: 0 0 calc(50% - 24px);
+              max-width: calc(50% - 24px);
+            }
+            
+            @include respond-to(desktop) {
+              -ms-flex: 0 0 calc(100% - 24px);
+              flex: 0 0 calc(100% - 24px);
+              max-width: calc(100% - 24px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -227,16 +227,16 @@ class UnionStationTower_ACF {
              'id' => '',
            ),
            'layouts' => array(
-            'layout_5c884257a6edc' => array(
-              'key' => 'layout_5c884257a6edc',
-              'name' => 'deals',
-              'label' => 'Deals',
-              'display' => 'block',
-              'sub_fields' => array(
+              'layout_5c884257a6edc' => array(
+                  'key' => 'layout_5c884257a6edc',
+                  'name' => 'deals',
+                  'label' => 'Deals',
+                  'display' => 'block',
+                  'sub_fields' => array(
+                  ),
+                  'min' => '',
+                  'max' => '',
               ),
-              'min' => '',
-              'max' => '',
-            ),
               '5c82db52e74ba' => array(
                 'key' => '5c82db52e74ba',
                 'name' => 'content_section',
@@ -767,6 +767,35 @@ class UnionStationTower_ACF {
                     'maxlength' => '',
                     'rows' => '',
                     'new_lines' => '',
+                  ),
+                ),
+                'min' => '',
+                'max' => '',
+              ),
+              'layout_5c6736bdf85a4' => array(
+                'key' => 'layout_5c6736bdf85a4',
+                'name' => 'blog_posts',
+                'label' => 'Blog Posts',
+                'display' => 'row',
+                'sub_fields' => array(
+                  array(
+                    'key' => 'field_5c6736c9f85a5',
+                    'label' => 'Anchor',
+                    'name' => 'anchor',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                      'width' => '',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
                   ),
                 ),
                 'min' => '',

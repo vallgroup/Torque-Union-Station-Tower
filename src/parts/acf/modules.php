@@ -83,6 +83,14 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/list-blocks.php');
 
         break;
+      
+      case 'blog_posts' :
+
+        $anchor = get_sub_field('anchor');
+
+        include locate_template('/parts/acf/modules/blog-posts.php');
+
+        break;
     }
 
   endwhile;
