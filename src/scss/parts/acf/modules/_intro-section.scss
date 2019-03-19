@@ -47,39 +47,39 @@
         font-size: 60px;
         display: inline-block;
       }
-    }
-
-    .intro-border::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      border: 2px solid $blue-gray;
-      border-left-width: 0;
-      border-right-width: 0;
-      height: 4px;
-      width: 100%;
-      left: 0;
       
-      @include respond-to(desktop) {
-        width: calc(100% + 48px);
-        left: -24px;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        border: 2px solid $blue-gray;
+        border-left-width: 0;
+        border-right-width: 0;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        
+        @include respond-to(desktop) {
+          width: calc(100% + 48px);
+          left: -24px;
+        }
       }
-    }
-
-    .intro-border::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      border: 2px solid $blue-gray;
-      border-left-width: 0;
-      border-right-width: 0;
-      height: 4px;
-      width: 100%;
-      left: 0;
       
-      @include respond-to(desktop) {
-        width: calc(100% + 48px);
-        left: -24px;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        border: 2px solid $blue-gray;
+        border-left-width: 0;
+        border-right-width: 0;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        
+        @include respond-to(desktop) {
+          width: calc(100% + 48px);
+          left: -24px;
+        }
       }
     }
   }

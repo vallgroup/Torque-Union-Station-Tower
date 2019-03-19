@@ -1,16 +1,17 @@
 footer {
   width: 100%;
-  padding: 74px 0 60px;
+  padding: 74px 0 20px;
   background-color: $dark-grey;
 
   .footer-content-wrapper {
     margin: 0 auto;
     padding: 0 56px;
-    max-width: calc(100% - 112px);
+    max-width: calc(100% - 104px);
     width: 510px;
 
     @include respond-to(desktop) {
       width: 1176px;
+      padding: 0px;
     }
 
     .row {
@@ -29,6 +30,7 @@ footer {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
+        margin-bottom: 40px;
 
         @include respond-to(tablet) {
           -ms-flex: 0 0 50%;
@@ -82,7 +84,11 @@ footer {
           }
 
           p {
-            margin-top: 0;
+            margin: 0;
+          }
+
+          p + p {
+            margin-top: 16px;
           }
         }
       }
@@ -91,11 +97,17 @@ footer {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
-        
+        margin-bottom: 40px;
+
+        @include respond-to(tablet) {
+          margin-bottom: 50px;
+        }
+
         @include respond-to(desktop) {
           -ms-flex: 0 0 33.333333%;
           flex: 0 0 33.333333%;
           max-width: 33.333333%;
+          margin-bottom: 40px;
         }
 
         .widget {

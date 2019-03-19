@@ -1,6 +1,6 @@
 <?php
 
-$POSTS_PER_PAGE = 8;
+$POSTS_PER_PAGE = 3;
 
 $query = new WP_Query( array(
     'post_type'      => 'post',

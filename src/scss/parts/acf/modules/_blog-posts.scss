@@ -1,5 +1,13 @@
 .blog-posts-section {
-  padding: 0 12px;
+  margin: 0 auto;
+  padding: 0 56px;
+  max-width: calc(100% - 104px);
+  width: 510px;
+
+  @include respond-to(desktop) {
+    width: 1176px;
+    padding: 0px;
+  }
 
   .blog-loop-entry {
     display: -webkit-box;
@@ -10,6 +18,14 @@
     margin-right: -12px;
     margin-left: -12px;
 
+    @include respond-to(tablet) {
+      padding-bottom: 30px;
+    }
+    
+    @include respond-to(desktop) {
+      padding-bottom: 20px;
+    }
+
     .loop-blog {
       position: relative;
       padding: 0 12px;
@@ -17,6 +33,7 @@
       -ms-flex: 0 0 calc(100% - 24px);
       flex: 0 0 calc(100% - 24px);
       max-width: calc(100% - 24px);
+      margin-bottom: 60px;
 
       @include respond-to(tablet) {
         -ms-flex: 0 0 calc(50% - 24px);
@@ -30,11 +47,78 @@
         max-width: calc(33.333333% - 24px);
       }
 
-      .image-size {
-        height: 327px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      &:first-child {
+        .image-size::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.65;
+          border: solid 16px $blue-gray;
+        }
+      }
+
+      .image-position {
+        margin: 0 0 40px;
+
+        .image-size {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+
+          &:after {
+            content: "";
+            display: block;
+            padding-bottom: 87%;
+          }
+        }
+      }
+      h2 {
+        color: $dark-grey;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: $font_menu_items;
+        margin: 0 0 5px;
+
+        @include respond-to(tablet) {
+          font-size: 18px;
+        }
+      }
+
+      .excerpt {
+        color: $dark-grey;
+        font-size: 15px;
+        line-height: 18px;
+        font-family: $font_intro_content;
+        margin-bottom: 12px;
+
+        @include respond-to(tablet) {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        
+        p {
+          margin: 0;
+        }
+
+        p + p {
+          margin-top: 10px;
+        }
+      }
+
+      .read-more {
+        font-size: 16px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-family: $font_menu_items;
+        color: $blue-gray;
+
+        @include respond-to(tablet) {
+          font-size: 18px;
+        }
       }
     }
   }
