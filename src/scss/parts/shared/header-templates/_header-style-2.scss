@@ -117,4 +117,27 @@ header#header-style-2 {
     }
   }
 }
-  
+
+.page-hero.type-none {
+  #header-style-2 {
+    position: relative;
+    background-color: $dark-teal;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 31px 0 32px;
+
+    @include respond-to(tablet) {
+      padding: 28px 0 50px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 64px 0 63px;
+    }
+
+    .hero-left-border, .hero-right-border, .hero-center-bottom-border{
+      display: none;
+    }
+  }
+}
