@@ -48,10 +48,16 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
      unset($metaboxes['rsf']);
 
      $metaboxes['floor_plan_images'] = array (
-				'Floor Plan Additional Images',
+				'Images',
 				array( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'] ),
 				array(
 					'name_prefix' => 'floor_plan_images',
+          array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[floor_plan]',
+						'label'    => 'Floor Plan',
+					),
 					array(
 						'type'     => 'wp_media',
 						'context'  => 'post',
@@ -67,6 +73,9 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
 				),
 				'floor_plan_images'
 			);
+
+     remove_post_type_support( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'], 'excerpt' );
+     remove_post_type_support( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'], 'thumbnail' );
 
      return $metaboxes;
    });

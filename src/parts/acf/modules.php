@@ -16,7 +16,7 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/intro-section.php');
 
         break;
-      
+
       case 'image_with_text' :
 
         $image = get_sub_field( 'image' );
@@ -25,7 +25,7 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/image-with-text.php');
 
         break;
-      
+
       case 'content_section' :
 
         $align = get_sub_field( 'align' );
@@ -38,52 +38,14 @@ if ( have_rows( $modules ) ):
 
         break;
 
-      case 'deals' :
+      case 'post_slideshow' :
 
-        echo do_shortcode('[torque_filtered_loop post_type="torque_deal" tax="category_deal"]');
+        $slideshow_id = get_sub_field('slideshow_id');
 
-        break;
-
-      case 'floor_plans' :
-
-        echo do_shortcode('[torque_floor_plans]');
+        echo do_shortcode('[torque_slideshow id="'.$slideshow_id.'" type="post"]');
 
         break;
 
-      case 'map' :
-
-        $map_id = get_sub_field('map_id');
-
-        echo do_shortcode('[torque_map map_id="'.$map_id.'"]');
-
-        break;
-
-
-      case 'gallery_grid' :
-
-        $num_rows = get_sub_field( 'grid_rows' );
-
-        ?>
-        <div class="row gallery-module" >
-          <div class="gallery-grid-root grid-rows-<?php echo $num_rows; ?>" >
-        <?php
-          include locate_template('/parts/acf/modules/gallery-grid.php');
-        ?>
-          </div>
-        </div>
-        <?php
-
-        break;
-
-      case 'list_blocks' :
-
-        $title = get_sub_field( 'title' );
-        $description = get_sub_field( 'description' );
-
-        include locate_template('/parts/acf/modules/list-blocks.php');
-
-        break;
-      
       case 'blog_posts' :
 
         $anchor = get_sub_field('anchor');

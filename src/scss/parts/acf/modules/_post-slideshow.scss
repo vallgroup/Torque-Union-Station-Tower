@@ -1,0 +1,135 @@
+.torque-slideshow-react-entry {
+  .tq-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 65px $bodyPadding1 60px;
+
+    @include respond-to(tablet) {
+      justify-content: center;
+      padding: 65px $bodyPadding2 60px;
+    }
+
+    button {
+      @extend %dark-blue;
+
+      margin: 10px 15px;
+
+      @include respond-to-max(tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  .tq-tracker {
+    display: none;
+  }
+
+  .tq-slideshow {
+    margin-bottom: 60px;
+
+    @include respond-to-max(tablet) {
+      padding-bottom: 0;
+      height: auto;
+    }
+
+    .tq-side-overlay {
+      @include respond-to-max(tablet) {
+        display: none;
+      }
+
+      background: none;
+    }
+
+    .tq-slide {
+      @include respond-to-max(tablet) {
+        position: static;
+      }
+
+      .post-slide {
+        .post-image,
+        h3,
+        .slideshow-post-excerpt,
+        .slideshow-link-to-post,
+        .slideshow-post-terms {
+          display: none;
+        }
+
+        .post-details {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          @include respond-to(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+
+            padding: 0 $bodyPadding2;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+
+            @include respond-to(tablet) {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .slideshow-floor_plan_images_stacking_plan {
+            order: 3;
+
+            @include respond-to(tablet) {
+              grid-column: 1 / 2;
+              grid-row: 1 / 3;
+            }
+          }
+
+          .slideshow-floor_plan_images_view {
+            order: 4;
+
+            @include respond-to(tablet) {
+              grid-column: 2 / 3;
+              grid-row: 1 / 2;
+              object-fit: cover;
+            }
+          }
+
+          .slideshow-floor_plan_images_floor_plan {
+            order: 5;
+
+            @include respond-to(tablet) {
+              grid-column: 2 / 3;
+              grid-row: 2 / 3;
+              object-fit: cover;
+            }
+          }
+
+          .slideshow-floor_plan_downloads_pdf {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @include respond-to(tablet) {
+              right: $bodyPadding2;
+            }
+
+            button {
+              background-color: $white;
+              border-color: $white;
+              color: $dark-teal !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

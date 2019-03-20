@@ -1,15 +1,17 @@
-@import 'partials/variables';
+@import "partials/variables";
 
-@import 'grid';
+@import "grid";
 
-@import 'typography/typography';
+@import "typography/typography";
 
-@import 'parts/shared/header-parts/menu-items';
-@import 'parts/shared/header-templates/header-style-1';
-@import 'parts/shared/header-templates/header-style-2';
-@import 'parts/shared/header-templates/hero-navigation';
-@import 'parts/shared/_footer';
-@import 'parts/acf/modules/_intro-section';
-@import 'parts/acf/modules/_image-with-text';
-@import 'parts/acf/modules/_blog-posts';
-@import 'parts/acf/modules/_text-and-image';
+@import "parts/shared/header-parts/menu-items";
+@import "parts/shared/header-templates/header-style-1";
+@import "parts/shared/header-templates/header-style-2";
+@import "parts/shared/header-templates/hero-navigation";
+@import "parts/shared/footer";
+
+@import "parts/acf/modules/intro-section";
+@import "parts/acf/modules/image-with-text";
+@import "parts/acf/modules/blog-posts";
+@import "parts/acf/modules/text-and-image";
+@import "parts/acf/modules/post-slideshow";

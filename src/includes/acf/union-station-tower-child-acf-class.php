@@ -227,6 +227,39 @@ class UnionStationTower_ACF {
              'id' => '',
            ),
            'layouts' => array(
+             '5c92965f74a7d' => array(
+      					'key' => '5c92965f74a7d',
+      					'name' => 'post_slideshow',
+      					'label' => 'Post Slideshow',
+      					'display' => 'block',
+      					'sub_fields' => array(
+      						array(
+      							'key' => 'field_5c9296ced452a',
+      							'label' => 'Choose Slideshow',
+      							'name' => 'slideshow_id',
+                    'type' => 'post_object',
+              			'instructions' => '',
+              			'required' => 0,
+              			'conditional_logic' => 0,
+              			'wrapper' => array(
+              				'width' => '',
+              				'class' => '',
+              				'id' => '',
+              			),
+              			'post_type' => array(
+              				0 => 'torque_post_ss',
+              			),
+              			'taxonomy' => array(
+              			),
+              			'allow_null' => 0,
+              			'multiple' => 0,
+              			'return_format' => 'id',
+              			'ui' => 1,
+      						),
+      					),
+      					'min' => '',
+      					'max' => '',
+      				),
               '5c82db52e74ba' => array(
                 'key' => '5c82db52e74ba',
                 'name' => 'content_section',
