@@ -42,7 +42,18 @@ if ( have_rows( $modules ) ):
 
         $slideshow_id = get_sub_field('slideshow_id');
 
-        echo do_shortcode('[torque_slideshow id="'.$slideshow_id.'" type="post"]');
+        $slideshow = get_post($slideshow_id);
+        if (!$slideshow) { break; }
+
+        $posts = get_field('posts', $slideshow->ID);
+        if (!count($posts)) { break; }
+
+        $post_type = get_post_type($posts[0]);
+        $template = $post_type === Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name']
+          ? 'ust_floorplans'
+          : 'ust_locations';
+
+        echo do_shortcode('[torque_slideshow id="'.$slideshow_id.'" type="post" template="'.$template.'"]');
 
         break;
 
