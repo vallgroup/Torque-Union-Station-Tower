@@ -38,6 +38,39 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
  }
 
 
+ /**
+ * Floor Plan Plugin Settings
+ */
+
+ if ( class_exists( 'Torque_Floor_Plan_CPT' ) ) {
+   add_filter(Torque_Floor_Plan_CPT::$METABOXES_FILTER_HOOK, function($metaboxes) {
+     unset($metaboxes['floor_number']);
+     unset($metaboxes['rsf']);
+
+     $metaboxes['floor_plan_images'] = array (
+				'Floor Plan Additional Images',
+				array( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'] ),
+				array(
+					'name_prefix' => 'floor_plan_images',
+					array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[stacking_plan]',
+						'label'    => 'Stacking Plan',
+					),
+          array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[view]',
+						'label'    => 'View',
+					),
+				),
+				'floor_plan_images'
+			);
+
+     return $metaboxes;
+   });
+ }
 
 
 /**
