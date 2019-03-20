@@ -2,7 +2,7 @@
   <?php if ($anchor) { ?> id="<?php echo $anchor; ?>" <?php } ?>
   class="row blog-posts-section">
 
-  <div class="blog-loop-entry">
+  <div id="blog-loop-entry">
 
     <?php
 

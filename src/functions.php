@@ -100,4 +100,10 @@ function torque_enqueue_child_scripts() {
     );
 }
 
+/*
+Add REST API endpoints
+ */
+
+include locate_template('parts/acf/modules/blog/blog-posts-endpoint.php');
+
 ?>
