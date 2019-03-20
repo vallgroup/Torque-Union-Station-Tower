@@ -87,6 +87,8 @@ if ( have_rows( $modules ) ):
       case 'blog_posts' :
 
         $anchor = get_sub_field('anchor');
+        $number_rows = get_sub_field( 'number_rows' );
+        $show_button = get_sub_field( 'show_button_load_more_posts' );
 
         include locate_template('/parts/acf/modules/blog-posts.php');
 
