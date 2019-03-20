@@ -15,7 +15,7 @@ function get_blog_posts( $request ) {
 }
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'harrison-square/v1', '/posts/(?P<page>\d+)', array(
+  register_rest_route( 'unior-station/v1', '/posts/(?P<page>\d+)', array(
     'methods' => 'GET',
     'callback' => 'get_blog_posts',
     'args' => array(

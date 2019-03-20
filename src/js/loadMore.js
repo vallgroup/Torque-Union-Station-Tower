@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
       const newPosts = await fetch(
         `${
           window.location.origin
-        }/index.php/wp-json/harrison-square/v1/posts/${nextPage}`
+        }/index.php/wp-json/unior-station/v1/posts/${nextPage}`
       );
 
       const newNodes = await newPosts.text();

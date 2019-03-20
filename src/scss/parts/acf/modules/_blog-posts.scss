@@ -133,7 +133,7 @@
         display: inline-block;
         padding: 8px 30px;
         border: 2px solid $dark-teal;;
-        font-size: 22px;
+        font-size: 18px;
         font-family: $font_image_with_text;
         line-height: 1.68;
         letter-spacing: normal;
@@ -141,6 +141,10 @@
         text-transform: uppercase;
         color: $dark-teal;
         cursor: pointer;
+
+        @include respond-to(desktop) {
+          font-size: 22px;
+        }
       }
     }
   }
