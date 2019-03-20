@@ -4,6 +4,7 @@ require_once( get_stylesheet_directory() . '/includes/union-station-tower-child-
 require_once( get_stylesheet_directory() . '/includes/widgets/union-station-tower-child-widgets-class.php');
 require_once( get_stylesheet_directory() . '/includes/customizer/union-station-tower-child-customizer-class.php');
 require_once( get_stylesheet_directory() . '/includes/acf/union-station-tower-child-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/union-station-tower-locations-cpt-class.php');
 
 /**
  * Child Theme Nav Menus
@@ -37,6 +38,13 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
    new UnionStationTower_ACF();
  }
 
+/**
+ * Locations CPT
+ */
+
+ if ( class_exists( 'UnionStationTower_Locations_CPT' ) ) {
+   new UnionStationTower_Locations_CPT();
+ }
 
  /**
  * Floor Plan Plugin Settings
