@@ -1,0 +1,82 @@
+.torque-slideshow-react-entry[data-template^="ust_locations"] {
+  .tq-items-list {
+    @include respond-to(tablet) {
+      justify-content: center;
+    }
+    button {
+      @include respond-to(tablet) {
+        margin: 0 1% 10px;
+        width: 48%;
+      }
+
+      @include respond-to(desktop) {
+        width: auto;
+      }
+    }
+  }
+
+  .tq-slideshow.template_ust_locations {
+    margin-bottom: 60px;
+    height: auto;
+    padding-bottom: 0;
+
+    .tq-slide {
+      position: static;
+    }
+
+    .tq-side-overlay {
+      width: $bodyPadding2;
+
+      @include respond-to(desktop) {
+        width: $bodyPadding1;
+      }
+    }
+
+    .post-slide.post-type-Locations {
+      padding: 0 $bodyPadding2;
+      box-sizing: border-box;
+
+      color: $dark-grey;
+
+      @include respond-to(desktop) {
+        display: flex;
+        padding: 0 $bodyPadding1;
+      }
+
+      .post-image {
+        width: 100%;
+        height: 60vw;
+        box-sizing: border-box;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include respond-to(desktop) {
+          margin-right: 2%;
+          width: 48%;
+          height: 35vw;
+          box-sizing: content-box;
+        }
+      }
+
+      .post-details {
+        @include respond-to(desktop) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          padding: 20px $bodyPadding1;
+          width: 50%;
+          box-sizing: border-box;
+        }
+
+        h3 {
+          color: $dark-teal;
+        }
+
+        ul {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
