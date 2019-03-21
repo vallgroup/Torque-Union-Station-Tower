@@ -6,7 +6,7 @@
   @include respond-to(tablet) {
     padding: 82px 0 69px;
   }
-  
+
   @include respond-to(desktop) {
     padding: 130px 0 104px;
   }
@@ -22,7 +22,7 @@
     @include respond-to(tablet) {
       width: 510px;
     }
-    
+
     @include respond-to(desktop) {
       width: 976px;
     }
@@ -41,15 +41,15 @@
         line-height: 43px;
         font-size: 39px;
       }
-      
+
       @include respond-to(desktop) {
         line-height: 72px;
         font-size: 60px;
         display: inline-block;
       }
-      
+
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: -8px;
         border: 2px solid $blue-gray;
@@ -58,15 +58,15 @@
         height: 4px;
         width: 100%;
         left: 0;
-        
+
         @include respond-to(desktop) {
           width: calc(100% + 48px);
           left: -24px;
         }
       }
-      
+
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         border: 2px solid $blue-gray;
@@ -75,7 +75,7 @@
         height: 4px;
         width: 100%;
         left: 0;
-        
+
         @include respond-to(desktop) {
           width: calc(100% + 48px);
           left: -24px;
@@ -94,14 +94,13 @@
     max-width: 100%;
     padding: 17px 0 0 0;
 
-
     @include respond-to(tablet) {
       width: 510px;
       padding: 43px 0 0 0;
       font-size: 18px;
       line-height: 28px;
     }
-    
+
     @include respond-to(desktop) {
       width: 776px;
       padding: 64px 0 0 0;
@@ -110,4 +109,3 @@
     }
   }
 }
-

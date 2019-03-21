@@ -90,7 +90,8 @@ a {
     min-width: 130px;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: $blue-gray;
     color: $white;
   }
@@ -100,7 +101,8 @@ a {
   border-color: $blue-gray;
   color: $blue-gray;
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: $blue-gray;
     color: $white;
   }
@@ -110,18 +112,20 @@ a {
   border-color: $white;
   color: $white;
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: $white;
     color: $white;
   }
 }
 
 %dark-blue {
-  border-color: $blue-gray;
-  color: $blue-gray;
+  border-color: $dark-teal;
+  color: $dark-teal;
 
-  &:hover {
-    background-color: $blue-gray;
+  &:hover,
+  &.active {
+    background-color: $dark-teal;
     color: $white;
   }
 }

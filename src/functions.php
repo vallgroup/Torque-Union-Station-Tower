@@ -4,6 +4,7 @@ require_once( get_stylesheet_directory() . '/includes/union-station-tower-child-
 require_once( get_stylesheet_directory() . '/includes/widgets/union-station-tower-child-widgets-class.php');
 require_once( get_stylesheet_directory() . '/includes/customizer/union-station-tower-child-customizer-class.php');
 require_once( get_stylesheet_directory() . '/includes/acf/union-station-tower-child-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/union-station-tower-locations-cpt-class.php');
 
 /**
  * Child Theme Nav Menus
@@ -37,7 +38,81 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
    new UnionStationTower_ACF();
  }
 
+/**
+ * Locations CPT
+ */
 
+ if ( class_exists( 'UnionStationTower_Locations_CPT' ) ) {
+   new UnionStationTower_Locations_CPT();
+ }
+
+
+ /**
+ * Slideshow plugin settings
+ */
+
+ if ( class_exists( 'Torque_Slideshow' ) ) {
+   add_filter( Torque_Slideshow::$USE_POST_SLIDESHOW_FILTER_HOOK, function() { return true; });
+
+   if ( class_exists( 'Torque_Post_Slideshow_CPT' ) ) {
+     add_filter( Torque_Post_Slideshow_CPT::$RELATIONSHIP_FIELD_FILTER_HOOK, function($field) {
+
+       $field['post_type'] = array(
+         0 => Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'],
+         1 => UnionStationTower_Locations_CPT::$locations_labels['post_type_name'],
+       );
+
+       $field['filters'] = array(
+				 0 => 'post_type',
+			 );
+
+       return $field;
+     });
+   }
+ }
+
+ /**
+ * Floor Plan Plugin Settings
+ */
+
+ if ( class_exists( 'Torque_Floor_Plan_CPT' ) ) {
+   add_filter(Torque_Floor_Plan_CPT::$METABOXES_FILTER_HOOK, function($metaboxes) {
+     unset($metaboxes['floor_number']);
+     unset($metaboxes['rsf']);
+
+     $metaboxes['floor_plan_images'] = array (
+				'Images',
+				array( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'] ),
+				array(
+					'name_prefix' => 'floor_plan_images',
+          array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[floor_plan]',
+						'label'    => 'Floor Plan',
+					),
+					array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[stacking_plan]',
+						'label'    => 'Stacking Plan',
+					),
+          array(
+						'type'     => 'wp_media',
+						'context'  => 'post',
+						'name'     => '[view]',
+						'label'    => 'View',
+					),
+				),
+				'floor_plan_images'
+			);
+
+     remove_post_type_support( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'], 'excerpt' );
+     remove_post_type_support( Torque_Floor_Plan_CPT::$floor_plan_labels['post_type_name'], 'thumbnail' );
+
+     return $metaboxes;
+   });
+ }
 
 
 /**

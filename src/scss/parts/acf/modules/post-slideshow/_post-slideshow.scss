@@ -1,0 +1,54 @@
+.torque-slideshow-react-entry {
+  .tq-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 65px $bodyPadding2 60px;
+
+    @include respond-to(tablet) {
+      justify-content: center;
+    }
+
+    button {
+      @extend %dark-blue;
+
+      margin: 10px 15px;
+
+      @include respond-to-max(tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  .tq-tracker {
+    display: none;
+  }
+
+  .tq-side-overlay {
+    background: none !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 26px;
+      width: 13px;
+      transform: translate(-50%, -50%);
+
+      background-image: url("../statics/images/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &.tq-side-overlay-right {
+      &::after {
+        transform: translate(-50%, -50%) rotateY(180deg);
+      }
+    }
+  }
+}
+
+@import "./floor-plans-slideshow";
+@import "./locations-slideshow";
