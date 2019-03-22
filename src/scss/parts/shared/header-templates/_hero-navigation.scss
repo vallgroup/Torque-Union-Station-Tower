@@ -36,7 +36,7 @@
           border-radius: 0;
           border: 0;
           background-color: $white;
-          transition-duration: 0.2s;
+          transition-duration: 0.3s;
 
           @include respond-to(tablet) {
             height: 3px;

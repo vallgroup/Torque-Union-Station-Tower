@@ -13,11 +13,23 @@
     button {
       @extend %dark-blue;
 
+      text-align: center;
+      font-size: 15px;
+      line-height: 19px;
+      font-family: $font_image_with_text;
       margin: 10px 15px;
 
-      @include respond-to-max(tablet) {
+      @include respond-to(tablet) {
         width: 100%;
+        font-size: 18px;
+        line-height: 37px;
       }
+
+      @include respond-to(desktop) {
+        font-size: 22px;
+        line-height: 37px;  
+      }
+
     }
   }
 
@@ -46,6 +58,10 @@
       &::after {
         transform: translate(-50%, -50%) rotateY(180deg);
       }
+    }
+
+    img {
+      display: none;
     }
   }
 }

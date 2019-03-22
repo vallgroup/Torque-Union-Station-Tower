@@ -2,12 +2,12 @@
 
 $type = get_field('hero_type');
 
-if (!$type) {
-  $type = 'none';
-}
-
 $image = get_field('hero_image');
 $slideshow = get_field('hero_slideshow');
+
+if (!$type or ($type === 'image' and !$image) or ($type === 'slideshow' and !$slideshow)) {
+  $type = 'none';
+}
 
 $overlay_type = get_field('hero_overlay_type');
 $text_overlay = get_field('hero_text_overlay');
