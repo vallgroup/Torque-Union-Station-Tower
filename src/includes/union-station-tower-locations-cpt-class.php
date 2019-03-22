@@ -17,8 +17,8 @@ class UnionStationTower_Locations_CPT {
 	 * @var array
 	 */
 	public static $locations_labels = array(
-			'singular'       => 'Location',
-			'plural'         => 'Locations',
+			'singular'       => 'Slider',
+			'plural'         => 'Sliders',
 			'slug'           => 'torque-location',
 			'post_type_name' => 'torque_location',
 	);
