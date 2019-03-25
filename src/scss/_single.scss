@@ -19,6 +19,7 @@
         color: $medium-teal;
         margin: 0 0 6px;
         font-size: 20px;
+        text-transform: uppercase;
       }
 
       .post-date, h3 {
@@ -42,6 +43,10 @@
       margin: 0 auto;
       max-width: calc(100% - 112px);
     }
+
+    .wp-block-button {
+      display: none;
+    }
   @include respond-to(tablet) {
     width: 510px;
     margin: 0 auto 95px;
@@ -58,7 +63,7 @@
 
       h1 {
         font-size: 35px;
-        line-height: 26px;
+        line-height: 45px;
       }
 
       h3 {
@@ -130,6 +135,7 @@
       h1 {
         margin: 0 0 50px;
         font-size: 45px;
+        line-height: 50px;
       }
 
       .post-date {
@@ -189,6 +195,9 @@
         width: 49px;
         height: 43px;
         background-color: $dark-teal;
+        background-image: url("../statics/images/white_search_arrow.svg");
+        background-repeat: no-repeat;
+        background-position: center;
         margin-bottom: 0;
         border: 1px solid #979797;
         border-left: none;
