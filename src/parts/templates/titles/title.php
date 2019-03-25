@@ -5,6 +5,6 @@
   </h1>
 
   <h3>Written by <?php the_author(); ?></h3>
-  <p>December 20th, 2018 <?php the_time('F j, Y'); ?></p>
+  <p class="post-date"><?php the_time('F j, Y'); ?></p>
   
 </div>
