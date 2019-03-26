@@ -115,9 +115,14 @@
         text-transform: uppercase;
         font-family: $font_menu_items;
         color: $blue-gray;
+        transition: color ease-in-out 250ms;
 
         @include respond-to(tablet) {
           font-size: 18px;
+        }
+
+        &:hover {
+          color: #5b666f;
         }
       }
     }
@@ -144,6 +149,36 @@
 
         @include respond-to(desktop) {
           font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &.sidebar-primary-container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    
+    #blog-loop-entry{
+      padding-bottom: 0;
+    
+      .loop-blog {
+        @include respond-to(desktop) {
+          -ms-flex: 0 0 calc(100% - 24px);
+          flex: 0 0 calc(100% - 24px);
+          max-width: calc(100% - 24px);
+        }
+
+        &:first-child {
+          .image-size::before {
+            display: none;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

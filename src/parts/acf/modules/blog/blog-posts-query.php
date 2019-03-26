@@ -8,10 +8,15 @@ if (!(isset($POSTS_PER_PAGE) and $POSTS_PER_PAGE > 3)) {
   $POSTS_PER_PAGE = 3;
 }
 
+if (!(isset($post_not_in))) {
+  $post_not_in = array();
+}
+
 $query = new WP_Query( array(
   'post_type'      => 'post',
   'paged'          => $paged,
-  'posts_per_page' => $POSTS_PER_PAGE
+  'posts_per_page' => $POSTS_PER_PAGE,
+  'post__not_in' => $post_not_in
 ));
 
 if ( $query->have_posts() ) {

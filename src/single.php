@@ -17,15 +17,18 @@
 		<?php get_template_part( 'parts/templates/titles/title-page', get_post_format() ); ?>
 
 		<div class="post-container">
+			<div class="row">
 				<div class="blog-post-data">
 					<?php get_template_part( 'parts/templates/titles/title', get_post_format() ); ?>
 					<?php get_template_part( 'parts/templates/post-thumbnail', get_post_format() ); ?>
 					<?php get_template_part( 'parts/templates/content', get_post_format() ); ?>
 				</div>
+				<div class="blog-post-line"></div>
 				<div class="blog-post-sidebar">
 					<?php get_template_part( 'sidebar-primary', get_post_format() ); ?>
 					<?php get_template_part( 'parts/templates/recent-posts', get_post_format() ); ?>
 				<div>
+			</div>
 		</div>
 	<?php
 		}

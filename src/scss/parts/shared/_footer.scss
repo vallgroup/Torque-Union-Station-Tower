@@ -6,7 +6,7 @@ footer {
   .footer-content-wrapper {
     margin: 0 auto;
     padding: 0 56px;
-    max-width: calc(100% - 104px);
+    max-width: calc(100% - 112px);
     width: 510px;
 
     @include respond-to(desktop) {
