@@ -1,0 +1,40 @@
+.button-section {
+  padding: 40px 56px;
+
+  @include respond-to(tablet) {
+    padding: 55px 56px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 80px 56px;
+  }
+
+  .cta-wrapper {
+    margin: auto;
+    text-align: center;
+    max-width: 510px;
+
+    @include respond-to(desktop) {
+      max-width: 1176px;
+    }
+
+    button {
+      border: solid 2px $dark-teal;
+      font-family: $font_image_with_text;
+      color: $dark-teal;
+      font-size: 15px;
+      line-height: 19px;
+      height: auto;
+
+      @include respond-to(tablet) {
+        font-size: 18px;
+        line-height: 37px;
+      }
+
+      @include respond-to(desktop) {
+        font-size: 22px;
+      }
+    }
+  }
+}
+

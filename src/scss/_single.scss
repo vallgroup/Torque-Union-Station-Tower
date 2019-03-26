@@ -2,6 +2,10 @@
   margin: 0 auto;
   padding: 40px 12px 50px;
 
+  .wp-block-button {
+    display: none;
+  }
+
   @include respond-to(tablet) {
     padding: 85px 12px;
     max-width: calc(100% - 104px);

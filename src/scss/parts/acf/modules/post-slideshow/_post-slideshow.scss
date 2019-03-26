@@ -4,32 +4,47 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding: 65px $bodyPadding2 60px;
+    padding: 10px 56px 60px !important;
+    margin: 0 auto;
+    max-width: calc(100% - 112px);
+    width: 510px;
+    justify-content: left;
+
 
     @include respond-to(tablet) {
-      justify-content: center;
+      margin: 0 auto;
+      max-width: calc(100% - 80px);
+      width: 518px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 10px 0px 60px !important;
+      width: 1200px;
     }
 
     button {
       @extend %dark-blue;
-
-      text-align: center;
-      font-size: 15px;
-      line-height: 19px;
-      font-family: $font_image_with_text;
-      margin: 10px 15px;
+      width: 100%;
+      height: auto;
+      padding: 12px 8px;
+      margin: 0 0 24px;
 
       @include respond-to(tablet) {
-        width: 100%;
-        font-size: 18px;
-        line-height: 37px;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        padding: 12px 5px;
+        max-width: calc(50% - 10px);
+        margin: 0 5px 10px;
       }
 
       @include respond-to(desktop) {
-        font-size: 22px;
-        line-height: 37px;  
+        padding: 12px 8px;
+        max-width: calc(50% - 40px);
+        margin: 0 12px 24px;
       }
-
     }
   }
 
@@ -38,7 +53,12 @@
   }
 
   .tq-side-overlay {
+    min-width: 56px;
     background: none !important;
+
+    @include respond-to(desktop) {
+      width: calc(((50vw - 588px) / 2)) !important;
+    }
 
     &::after {
       content: "";

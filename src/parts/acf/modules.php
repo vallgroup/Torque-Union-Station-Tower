@@ -80,6 +80,14 @@ if ( have_rows( $modules ) ):
 
         break;
 
+      case 'button' :
+
+        $cta = get_sub_field('cta');
+
+        include locate_template('/parts/acf/modules/button.php');
+
+        break;
+
     }
 
   endwhile;
