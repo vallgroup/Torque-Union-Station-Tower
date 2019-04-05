@@ -181,4 +181,24 @@ Add REST API endpoints
 
 include locate_template('parts/acf/modules/blog/blog-posts-endpoint.php');
 
+
+add_shortcode( 'tq_homepage_animation', 'tq_homepage_animation_func' );
+
+function tq_homepage_animation_func( $atts, $content = '' ) {
+  $atts = shortcode_atts( array(
+
+  ), $atts, 'tq_homepage_animation' );
+
+  ob_start();
+
+  ?>
+  <div class="homepage-animation">
+    <div class="homepage-animation-image homepage-animation-image-1" style="background-image: url(<?php echo get_stylesheet_directory_uri() . '/statics/images/homepage-animation-1.jpg'; ?>);"></div>
+    <div class="homepage-animation-image homepage-animation-image-2" style="background-image: url(<?php echo get_stylesheet_directory_uri() . '/statics/images/homepage-animation-2.jpg'; ?>);"></div>
+  </div>
+  <?php
+
+  return ob_get_clean();
+}
+
 ?>
