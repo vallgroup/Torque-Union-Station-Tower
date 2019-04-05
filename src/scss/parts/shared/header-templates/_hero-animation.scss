@@ -1,0 +1,51 @@
+.homepage-animation {
+	display: block;
+	position: relative;
+	height: 98vh;
+	overflow: hidden;
+
+	&-image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-size: cover;
+		background-position: 25% top;
+	}
+
+	&-image-1 {
+		height: 200%;
+		animation: 10s ease panDown;
+		animation-fill-mode: forwards;
+	}
+
+	&-image-2 {
+		height: 100%;
+		z-index: 3;
+		opacity: 0;
+		animation: 1.5s ease fadeIn;
+		animation-fill-mode: forwards;
+		animation-delay: 8.5s;
+		background-position: center bottom;
+	}
+}
+
+@keyframes panDown {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
