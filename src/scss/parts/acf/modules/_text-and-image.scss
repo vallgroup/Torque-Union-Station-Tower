@@ -1,9 +1,28 @@
 .text-and-image-section {
-  padding: 0;
+  padding: 0 0 29px 0;
+
+  @include respond-to(tablet) {
+    padding: 0 0 15px 0;
+  }
+
+  @include respond-to(desktop) {
+    padding: 0 0 88px 0;
+  }
 
   .text-and-image-wrapper {
-    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 56px;
+    max-width: calc(100% - 104px);
+    width: 510px;
+
+    @include respond-to(tablet) {
+      max-width: 100%;
+      padding: 0px;
+    }
+
+    @include respond-to(desktop) {
+      width: 1440px;
+    }
 
     .text-and-image-row {
       display: -webkit-box;
@@ -17,55 +36,111 @@
       .col-text-and-image {
         position: relative;
         padding: 0 12px;
+        margin-bottom: 8px;
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% - 24px);
-        flex: 0 0 calc(50% - 24px);
-        max-width: calc(50% - 24px);
-        margin-bottom: 130px;
+        -ms-flex: 0 0 calc(100% - 24px);
+        flex: 0 0 calc(100% - 24px);
+        max-width: calc(100% - 24px);
+
+        @include respond-to(tablet) {
+          margin-bottom: 42px;
+        }
+
+        @include respond-to(desktop) {
+          -ms-flex: 0 0 calc(50% - 24px);
+          flex: 0 0 calc(50% - 24px);
+          max-width: calc(50% - 24px);
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .image-wrapper {
+          text-align: center;
+
+          @include respond-to(desktop) {
+            text-align: left;
+          } 
+        }
 
         .content-inner {
-          width: 588px;
           padding: 0px;
-          max-width: calc(100% - 52px);
-          
+          max-width: 100%;
+          margin: 0;
+
+          @include respond-to(desktop) {
+            width: 588px;
+            max-width: calc(100% - 52px);
+            margin: auto auto auto 0;
+          } 
+
           h2 {
             font-family: $font_title_footer;
-            font-size: 24px;
-            line-height: 37px;
+            font-size: 18px;
+            line-height: 20px;
             color: $dark-teal;
             margin: 0;
+
+            @include respond-to(tablet) {
+              font-size: 24px;
+              line-height: 37px;
+            }
           }
 
           h3 {
             font-family: $font_image_with_text;
-            font-size: 24px;
-            line-height: 37px;
             color: $dark-teal;
             margin: 12px 0 0;
+            font-size: 14px;
+            line-height: 37px;
+
+            @include respond-to(tablet) {
+              font-size: 21px;
+            }
+
+            @include respond-to(desktop) {
+              font-size: 24px;
+            }
           }
 
           .content {
-            margin: 42px 0 0;
+            margin: 14px 0 0;
             font-family: $font_intro_content;
-            font-size: 24px;
-            line-height: 35px;
+            font-size: 15px;
+            line-height: 24px;
             color: $dark-grey;
-          }
-        }
-      }
 
-      &.image-text {
-        .image-wrapper {
-          text-align: left;
+            @include respond-to(tablet) {
+              font-size: 18px;
+              line-height: 28px;
+            }
+
+            @include respond-to(desktop) {
+              font-size: 24px;
+              line-height: 35px;
+              margin: 42px 0 0;
+            }
+            
+            p:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
       }
 
       &.text-image {
-        .image-wrapper {
-          text-align: right;
-          -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-          order: 2;    
+        @include respond-to(desktop) {
+          .image-wrapper {
+            text-align: right;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;   
+          }
+  
+          .content-inner {
+            margin: auto 0 auto auto;
+          }
         }
       }
     }

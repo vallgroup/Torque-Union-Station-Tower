@@ -1,0 +1,101 @@
+.text-and-image-section .text-and-image-wrapper .text-and-image-row .col-text-and-image img {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+        body {
+                font-size: 18px;
+                line-height: 2;
+        }
+}
+div.slideshow-post-cotent.slideshow-post-field li {
+     line-height: 1.4;
+   margin: 12px 0;
+}
+div.blog-post-data div.tq-post-title h3 {
+    display:none;
+}
+
+div.torque-menu-item-wrapper.active a div.torque-menu-item.active {
+    color:#7CAED2 !important;
+}
+.post-container .row .blog-post-data .tq-title h1,
+.post-container .row .blog-post-sidebar h4 {
+        color:#7CAED2
+}
+
+.post-container .row .blog-post-sidebar form .search-submit {
+    background-color:#7CAED2
+}
+div.torque-menu-item-wrapper a div.torque-menu-item {
+        transition: color ease-in-out 250ms;
+}
+
+div.torque-menu-item-wrapper a div.torque-menu-item:hover {
+    color:#7CAED2 !important;
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .torque-slideshow-react-entry[data-template^="ust_locations"] .tq-slideshow.template_ust_locations .post-slide.post-type-Locations .post-image {
+    width: 45%;
+    height: 25vw;
+    background-size: cover;
+        background-position: center center;
+    }
+}
+
+.page-hero.type-none #header-style-2 {
+    position: relative;
+    background-color: #5b666f;
+}
+
+.blog-posts-section #blog-loop-entry #blog-loop-load-more h2 {
+    color:#7caed2;
+    border: 4px double #7caed2;
+}
+
+.blog-posts-section #blog-loop-entry .loop-blog .image-position { margin: 0 0 15px; }
+
+.blog-posts-section #blog-loop-entry .loop-blog .read-more:hover {
+    color:#5b666f;
+    transition: color ease-in-out 250ms;
+}
+.text-and-image-section .text-and-image-wrapper .text-and-image-row .col-text-and-image .content-inner h2,
+.text-and-image-section .text-and-image-wrapper .text-and-image-row .col-text-and-image .content-inner h3,
+.torque-slideshow-react-entry[data-template^="ust_locations"] .tq-slideshow.template_ust_locations .post-slide.post-type-Locations .post-details h3 {
+    color: #7caed2;
+}
+button.dark-blue, .torque-slideshow-react-entry .tq-items-list button {
+    border-color: #7caed2;
+    color: #7caed2;
+}
+
+    button.dark-blue:hover, .torque-slideshow-react-entry .tq-items-list button:hover, button.active.dark-blue, .torque-slideshow-react-entry .tq-items-list button.active {
+    background-color: #7caed2;
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+    .intro-wrapper {
+    padding: 100px 0;
+    }
+}
+
+.blog-posts-section #blog-loop-entry .loop-blog:first-child .image-size::before {
+    border: solid 0px #7caed2;
+}
+
+.post-container .wp-block-button {
+    display:inline;
+}
+.wp-block-button__link {
+    background-color:#7caed2;
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-family: Town80TextMedium, Raleway, "sans-serif";
+        transition: background-color ease-in-out 250ms;
+}
+.wp-block-button__link:hover {
+    background-color:#5b666f;
+}

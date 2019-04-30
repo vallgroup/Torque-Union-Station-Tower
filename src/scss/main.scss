@@ -8,11 +8,16 @@
 @import "parts/shared/header-templates/header-style-1";
 @import "parts/shared/header-templates/header-style-2";
 @import "parts/shared/header-templates/hero-navigation";
+@import "parts/shared/header-templates/hero-animation";
 @import "parts/shared/footer";
 
 @import "parts/acf/modules/intro-section";
 @import "parts/acf/modules/image-with-text";
 @import "parts/acf/modules/blog-posts";
-
 @import "parts/acf/modules/text-and-image";
+@import "parts/acf/modules/button";
 @import "parts/acf/modules/post-slideshow/post-slideshow";
+
+@import "single";
+
+@import "customizer";

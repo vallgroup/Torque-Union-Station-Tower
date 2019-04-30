@@ -1,5 +1,48 @@
+.torque-slideshow-react-entry[data-template^="ust_floorplans"] {
+  display: block;
+
+  @include respond-to(tablet) {
+    padding-bottom: 70px;
+  }
+
+  .tq-items-list {
+    position: relative;
+    padding-top: 60px !important;
+
+    @include respond-to(tablet) {
+      padding-top: 70px !important;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      top: 0;
+      left: 56px;
+      right: 56px;
+      bottom: auto;
+      height: 1px;
+      background-color: #979797;
+      position: absolute;
+
+
+      @include respond-to(tablet) {
+        left: 61px;
+        right: 61px;
+      }
+
+      @include respond-to(desktop) {
+        left: 12px;
+        right: 12px;
+      }
+    }
+  }
+
+}
+
 .tq-slideshow.template_ust_floorplans {
+
   @include respond-to-max(tablet) {
+    padding-bottom: 0px;
     height: auto;
   }
 
@@ -8,7 +51,8 @@
       display: none;
     }
 
-    width: $bodyPadding2;
+    width: calc(((50vw - 588px) / 2));
+    min-width: 56px;
   }
 
   .tq-slide {
@@ -19,6 +63,11 @@
     .post-slide.post-type-Floor-Plans {
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
+      padding: 0 56px;
+      max-width: calc(100% - 112px);
+      width: 510px;
+      position: relative;
 
       @include respond-to(tablet) {
         display: grid;
@@ -27,10 +76,32 @@
         grid-row-gap: 2%;
         grid-column-gap: 20px;
 
-        padding: 0 $bodyPadding2;
         height: 100%;
-        width: 100%;
         box-sizing: border-box;
+        width: 632px;
+      }
+
+      @include respond-to(desktop) {
+        width: 1176px;
+        padding: 0px;
+      }
+
+      &::after{
+        @include respond-to(tablet) {
+          content: "";
+          position: absolute;
+          top: auto;
+          left: 56px;
+          right: 56px;
+          bottom: -70px;
+          height: 1px;
+          background-color: #979797;
+        }
+
+        @include respond-to(desktop) {
+          left: 0;
+          right: 0;
+        }
       }
 
       .slideshow-post-field {
