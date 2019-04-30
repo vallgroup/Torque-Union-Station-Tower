@@ -9,7 +9,7 @@ class UnionStationTower_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    // add_filter('acf/settings/show_admin', '__return_false');
+    add_filter('acf/settings/show_admin', '__return_false');
 
     // add acf fields to wp search
     if ( class_exists( 'Torque_ACF_Search' ) ) {
@@ -19,7 +19,7 @@ class UnionStationTower_ACF {
 
   public function acf_admin_init() {
     // hide options page
-    // remove_menu_page('acf-options');
+    remove_menu_page('acf-options');
   }
 
   public function add_fields_to_search( $fields ) {
