@@ -9,7 +9,7 @@ class UnionStationTower_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    // add_filter('acf/settings/show_admin', '__return_false');
+    add_filter('acf/settings/show_admin', '__return_false');
 
     // add acf fields to wp search
     if ( class_exists( 'Torque_ACF_Search' ) ) {
@@ -19,7 +19,7 @@ class UnionStationTower_ACF {
 
   public function acf_admin_init() {
     // hide options page
-    // remove_menu_page('acf-options');
+    remove_menu_page('acf-options');
   }
 
   public function add_fields_to_search( $fields ) {
@@ -125,66 +125,6 @@ class UnionStationTower_ACF {
           'append' => '',
           'maxlength' => '',
         ),
-        array(
-          'key' => 'field_5c82b745cae8f',
-          'label' => 'Overlay Type',
-          'name' => 'hero_overlay_type',
-          'type' => 'radio',
-          'instructions' => '',
-          'required' => 0,
-          'conditional_logic' => array(
-            array(
-              array(
-                'field' => 'field_5c82b318cae8c',
-                'operator' => '!=',
-                'value' => 'none',
-              ),
-            ),
-          ),
-          'wrapper' => array(
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'choices' => array(
-            'none' => 'None',
-            'text' => 'Text',
-            'default' => 'Default',
-          ),
-          'allow_null' => 0,
-          'other_choice' => 0,
-          'default_value' => 'default',
-          'layout' => 'horizontal',
-          'return_format' => 'value',
-          'save_other_choice' => 0,
-        ),
-        array(
-          'key' => 'field_5c82b79acae91',
-          'label' => 'Text Overlay',
-          'name' => 'hero_text_overlay',
-          'type' => 'text',
-          'instructions' => 'use \'em\' tags to add use cursive font',
-          'required' => 0,
-          'conditional_logic' => array(
-            array(
-              array(
-                'field' => 'field_5c82b745cae8f',
-                'operator' => '==',
-                'value' => 'text',
-              ),
-            ),
-          ),
-          'wrapper' => array(
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => '',
-          'placeholder' => 'eg <em>Floor</em> Plans',
-          'prepend' => '',
-          'append' => '',
-          'maxlength' => '',
-        ),
       ),
       'location' => array(
         array(
@@ -260,118 +200,6 @@ class UnionStationTower_ACF {
       					'min' => '',
       					'max' => '',
       				),
-              '5c82db52e74ba' => array(
-                'key' => '5c82db52e74ba',
-                'name' => 'content_section',
-                'label' => 'Content Section',
-                'display' => 'block',
-                'sub_fields' => array(
-                  array(
-                    'key' => 'field_5c82db9c9e560',
-                    'label' => 'Align',
-                    'name' => 'align',
-                    'type' => 'radio',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                      'width' => '',
-                      'class' => '',
-                      'id' => '',
-                    ),
-                    'choices' => array(
-                      'left' => 'Left',
-                      'centre' => 'Centre',
-                      'right' => 'Right',
-                    ),
-                    'allow_null' => 0,
-                    'other_choice' => 0,
-                    'default_value' => 'centre',
-                    'layout' => 'horizontal',
-                    'return_format' => 'value',
-                    'save_other_choice' => 0,
-                  ),
-                  array(
-                    'key' => 'field_5c82dbca9e561',
-                    'label' => 'Title',
-                    'name' => 'title',
-                    'type' => 'text',
-                    'instructions' => 'use \'em\' tags for cursive font',
-                    'required' => 1,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                      'width' => '',
-                      'class' => '',
-                      'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => 'eg <em>Floor</em> Plans',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                  ),
-                  array(
-                    'key' => 'field_5c82dbf79e562',
-                    'label' => 'Body',
-                    'name' => 'body',
-                    'type' => 'textarea',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                      'width' => '',
-                      'class' => '',
-                      'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'maxlength' => '',
-                    'rows' => '',
-                    'new_lines' => 'wpautop',
-                  ),
-                  array(
-                    'key' => 'field_5c82dc139e563',
-                    'label' => 'CTA',
-                    'name' => 'cta',
-                    'type' => 'link',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                      'width' => '',
-                      'class' => '',
-                      'id' => '',
-                    ),
-                    'return_format' => 'array',
-                  ),
-                  array(
-                    'key' => 'field_5c82dc319e564',
-                    'label' => 'Background',
-                    'name' => 'background',
-                    'type' => 'radio',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                      'width' => '',
-                      'class' => '',
-                      'id' => '',
-                    ),
-                    'choices' => array(
-                      'none' => 'None',
-                      'threes' => 'Threes',
-                    ),
-                    'allow_null' => 0,
-                    'other_choice' => 0,
-                    'default_value' => 'none',
-                    'layout' => 'horizontal',
-                    'return_format' => 'value',
-                    'save_other_choice' => 0,
-                  ),
-                ),
-                'min' => '',
-                'max' => '',
-              ),
               '5c8c260b25903' => array(
                 'key' => '5c8c260b25903',
                 'name' => 'intro_section',
