@@ -103,6 +103,13 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
 						'name'     => '[view]',
 						'label'    => 'View',
 					),
+          array(
+            'type'     => 'textarea',
+            'context'  => 'post',
+            'name'     => '[360]',
+            'before_field' => '<br />Paste the embed code for a 360 tour below.',
+            'label'    => '360',
+          ),
 				),
 				'floor_plan_images'
 			);
