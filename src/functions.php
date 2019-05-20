@@ -104,10 +104,10 @@ if ( class_exists( 'UnionStationTower_Customizer' ) ) {
 						'label'    => 'View',
 					),
           array(
-            'type'     => 'textarea',
+            'type'     => 'text',
             'context'  => 'post',
             'name'     => '[360]',
-            'before_field' => '<br />Paste the embed code for a 360 tour below.',
+            'before_field' => '<br />Enter the URL for a 360 tour below.',
             'label'    => '360',
           ),
 				),
