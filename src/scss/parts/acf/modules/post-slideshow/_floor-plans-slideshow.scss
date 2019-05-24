@@ -41,6 +41,31 @@
 
 .tq-slideshow.template_ust_floorplans {
 
+  &.lightbox-active {
+
+    .tq-side-overlay {
+      display: none;
+      // position: fixed;
+      // height: 100%;
+      // top: 0;
+
+      // &:after {
+      //   top: 60%;
+      //   padding: 0.5em;
+      //   background-size: 20px;
+      //   background-position: center;
+      //   background-color: rgba(255, 255, 255, 0.6);
+      // }
+
+      // &-left {
+      //   left: 0;
+      // }
+      // &-right {
+      //   right: 0;
+      // }
+    }
+  }
+
   @include respond-to-max(tablet) {
     padding-bottom: 0px;
     height: auto;
